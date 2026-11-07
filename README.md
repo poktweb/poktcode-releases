@@ -7,10 +7,20 @@ The application source code remains private. This repository only publishes pack
 ## Install (sideload Flatpak)
 
 ```bash
-flatpak install --user https://github.com/poktweb/poktcode-releases/releases/download/v0.1.0/PoktCode-0.1.0-linux-x86_64.flatpak
+curl -L -o PoktCode-0.1.0-linux-x86_64.flatpak \
+  https://github.com/poktweb/poktcode-releases/raw/v0.1.0/dist/PoktCode-0.1.0-linux-x86_64.flatpak
+flatpak install --user ./PoktCode-0.1.0-linux-x86_64.flatpak
 flatpak run com.poktweb.poktcode
 ```
 
+## Artifacts (v0.1.0)
+
+| File | Purpose |
+|------|---------|
+| `dist/PoktCode-0.1.0-linux-x86_64.tar.xz` | `linux-unpacked` archive for Flathub builds |
+| `dist/PoktCode-0.1.0-linux-x86_64.flatpak` | Sideloadable Flatpak bundle |
+| `screenshots/*.png` | AppStream / Flathub screenshots |
+
 ## Flathub
 
-Flatpak builds on Flathub download the `linux-unpacked` archive attached to each GitHub Release.
+Submission PR: https://github.com/flathub/flathub/pull/11051
